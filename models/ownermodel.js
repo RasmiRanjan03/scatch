@@ -1,7 +1,5 @@
 const mongoose=require('mongoose');
 
-
-
 const ownerschema=mongoose.Schema({
     name:{type:String,minLength:5, default:"Admin",trim:true},
     email:String,
@@ -15,4 +13,4 @@ const ownerschema=mongoose.Schema({
     contact:Number,
     address:String
 });
-module.exports=mongoose.model('user',userschema);
+module.exports=mongoose.model('owner',ownerschema);
