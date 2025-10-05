@@ -8,7 +8,8 @@ router.get("/",(req,res)=>{
     res.render("index",{error})
 })
 router.get('/shop',islogin,(req,res)=>{
-    res.render("shop")
+    res.render("shop",{products:[]})
 })
+
 
 module.exports = router
