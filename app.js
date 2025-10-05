@@ -33,7 +33,7 @@ app.use(flash());
 
 app.use('/owner',ownersrouter)
 app.use('/users',usersrouter)
-app.use('/product',productsrouter)
+app.use('/products',productsrouter)
 app.use('/',indexrouter)
 
 app.listen(3000);
