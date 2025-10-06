@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken')
 const usermodel=require("../models/usermodel")
 module.exports.islogin = async (req, res, next) => {
-    if (!req.cookies || !req.cookies.token) {
+    if (!req.cookies.token) {
         req.flash('error', 'Please login first')
         return res.redirect('/')
     }

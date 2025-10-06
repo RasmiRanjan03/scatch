@@ -60,6 +60,8 @@ module.exports.login = async (req, res) => {
         return res.redirect('/');
     }
 }
-module.exports.logout=async (req,res)=>{
+module.exports.logout= (req,res)=>{
+    
     res.cookie("token",'')
-    res.redirect('/')}
+    res.redirect('/')
+}

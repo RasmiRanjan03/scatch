@@ -14,6 +14,8 @@ router.post("/register",authontication)
 
 router.post("/login",login)
 
-router.post("logout",logout)
+// Allow logout via GET for convenient link-based logout from header
+router.get('/logout', logout)
+router.post("/logout",logout)
 
 module.exports=router;

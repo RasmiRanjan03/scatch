@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+const productmodel = require('./productmodel');
 
 
 
@@ -9,11 +10,14 @@ const userschema=mongoose.Schema({
     isadmin:Boolean,
     profilepic:{type:String,default:"default.webp"},
     contact:Number,
-    cart:[],
+    cart:[
+        {type:mongoose.Schema.Types.ObjectId,
+            ref:productmodel
+         }   ],
     address:String,
     orders:[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'order'
+        ref:productmodel
     }]
 });
 module.exports=mongoose.model('user',userschema);
